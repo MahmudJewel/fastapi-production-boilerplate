@@ -15,7 +15,7 @@ from app.utils.env import SECRET_KEY, REFRESH_SECRET_KEY, ALGORITHM, ACCESS_TOKE
 from app.core.dependencies import get_db, oauth2_scheme
 from app.schemas.user import Token
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
 # get user by email 
 async def get_user_by_email(db: Session, email: str):
