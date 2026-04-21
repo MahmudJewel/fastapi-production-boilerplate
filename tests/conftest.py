@@ -37,7 +37,7 @@ TEST_DB_URL = resolve_test_db_url()
 from app.core.dependencies import get_db
 from app.main import create_app
 from app.models.common import Base
-from app.models.user import User
+from app.models.user_model import User
 
 
 connect_args = {"check_same_thread": False} if TEST_DB_URL.startswith("sqlite") else {}

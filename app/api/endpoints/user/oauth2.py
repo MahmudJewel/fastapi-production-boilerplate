@@ -12,9 +12,9 @@ from authlib.integrations.starlette_client import OAuth
 
 # import 
 from app.core.dependencies import get_db
-from app.models import user as UserModel
-from app.api.endpoints.user import functions as user_functions
-from app.schemas.user import Token
+from app.models import user_model as UserModel
+from app.api.endpoints.user import user_function as user_functions
+from app.schemas.user_schema import Token
 from app.utils.env import (
     ACCESS_TOKEN_EXPIRE_DAYS, 
     REFRESH_TOKEN_EXPIRE_DAYS, 

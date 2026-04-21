@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
-from app.schemas.user import User
-from app.api.endpoints.user import functions as UserFunctions
+from app.schemas.user_schema import User
+from app.api.endpoints.user import user_function as UserFunctions
 
 
 # Role based access control

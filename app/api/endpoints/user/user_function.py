@@ -9,11 +9,11 @@ from passlib.context import CryptContext
 from jose import JWTError, jwt
 
 # import 
-from app.models import user as UserModel
-from app.schemas.user import UserCreate, UserUpdate
+from app.models import user_model as UserModel
+from app.schemas.user_schema import UserCreate, UserUpdate
 from app.utils.env import SECRET_KEY, REFRESH_SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_DAYS
 from app.core.dependencies import get_db, oauth2_scheme
-from app.schemas.user import Token
+from app.schemas.user_schema import Token
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
