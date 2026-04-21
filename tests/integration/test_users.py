@@ -2,7 +2,7 @@ from uuid import uuid4
 
 import pytest
 
-from app.models.user import User
+from app.models.user_model import User
 
 
 @pytest.mark.asyncio

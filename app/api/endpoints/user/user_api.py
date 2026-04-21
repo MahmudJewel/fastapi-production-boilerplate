@@ -6,8 +6,8 @@ from sqlalchemy.orm import Session
 
 # import
 from app.core.dependencies import get_db, oauth2_scheme 
-from app.schemas.user import User, UserCreate, UserUpdate
-from app.api.endpoints.user import functions as user_functions
+from app.schemas.user_schema import User, UserCreate, UserUpdate
+from app.api.endpoints.user import user_function as user_functions
 from app.core.rolechecker import RoleChecker
 
 user_module = APIRouter()
