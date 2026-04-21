@@ -33,3 +33,5 @@ python-dotenv
 authlib
 httpx
 itsdangerous 
+pytest
+pytest-asyncio

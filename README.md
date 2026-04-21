@@ -148,6 +148,44 @@ or
 | *1* | *GET* | ```/social/google/login``` | _Login by google_| _None_| _Anyone_|
 | *2* | *GET* | ```/social/auth/google/callback``` | _Callback for google_| _None_| _Anyone_|
 
+## Integration Tests
+
+### 1. Install test dependencies
+
+```sh
+(venv)$ pip install -r requirements.txt
+(venv)$ pip install -r dev.txt
+```
+
+### 2. Run tests
+
+```sh
+# run all integration tests
+(venv)$ python scripts/run_integration_tests.py -q
+
+# run single integration file
+(venv)$ python scripts/run_integration_tests.py test_users -q
+
+# run single test
+(venv)$ python scripts/run_integration_tests.py "test_users::test_create_user_creates_db_object" -q
+```
+
+### 3. Database mode
+
+```sh
+# same db (default), objects remain in DB
+(venv)$ python scripts/run_integration_tests.py --db-url sqlite:///./integration_test.db -q
+
+# separate db per run
+(venv)$ python scripts/run_integration_tests.py --db-url sqlite:///./integration_test.db --separate-db -q
+```
+
+Notes:
+- Tests override app DB dependency with test DB session.
+- Tests verify object created in relational DB.
+- Objects created by tests are kept in DB (no auto cleanup).
+- In separate DB mode, sqlite file name gets unique suffix each run.
+
 # Tools
 ### Back-end
 #### Language:
