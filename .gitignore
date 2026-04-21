@@ -2,5 +2,6 @@ __pycache__
 .env
 venv
 sqlite.db
+integration_test.db
 .agents/
 skills-lock.json
